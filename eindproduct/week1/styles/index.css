@@ -1,0 +1,81 @@
+body {
+    background-color: white;
+}
+
+a[href="#main"] {
+    position:absolute;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+    z-index:-10;
+}
+a[href="#main"]:focus,
+a[href="#main"]:active {
+    color: #fff;
+    background-color:#000;
+    top: auto;
+    width: 30%;
+    height: auto;
+    overflow:auto;
+    z-index:10;
+}
+
+article:active,
+article:focus-within,
+nav:active,
+nav:focus-within{
+    background-color: rgba(0, 255, 255, 0.3);
+}
+
+
+
+h1 {
+    font-family: "Inconsolata",Monaco,"Lucida Console",Consolas,"Courier New";
+}
+
+@font-face {
+    font-family: Ampersand;
+	src: local('Braxton'), local('GoudyOldStyleT-Italic'), local('Garamond-Italic'), local('Palatino-Italic');
+    unicode-range: U+26;
+}
+
+h1 {
+	font-family: Ampersand, "Muli",Helvetica, sans-serif;
+}
+
+
+article h1 {
+    font-size: 1.5em;
+}
+
+article img {
+    width: 10em;
+}
+
+img + p {
+}
+
+@media (min-width: 40em) {
+    body {
+
+    }
+}
+
+@media (min-width: 65em) { 
+    body {
+        background-color: rgb(145, 201, 15);
+    }
+}
+
+@media only screen and (min-width: 90em) {
+    body {
+        background-color: rgb(39, 167, 88);
+    }
+ } 
+
+ @media only screen and (min-width: 120em) {
+    body {
+        background-color: rgb(39, 95, 167);
+    }
+ } 
