@@ -65,23 +65,24 @@ The fancy ampersand is the first thing I added from the book. The method of putt
 
 
 
-### Week 2 CSSTTR
+## Week 2 CSSTTR
 
 This week, it's a lot more clear as what to do for the final assignment. Sadly, I now know I have to do a lot to hand in everything I wanted to make. Best thing to do now is make a planning and strictly stick to it.
 
 #### Weekly planning
 
 ##### 13/02
-- [ ] __Complete the HTML as it should be.__
-    - [ ] Check if all the right elements are there (like the "lang" attribute). 
-    - [ ] Watch the semantic markup, a couple of articles should be in a section.
-    - [ ] Add all the pages I want to make and write some content so the components make sense. 
+- [x] __Complete the HTML as it should be.__
+    - [x] Check if all the right elements are there (like the "lang" attribute). 
+    - [x] Watch the semantic markup, a couple of articles should be in a section.
+    - [x] Add all the pages I want to make and write some content so the components make sense. 
 - [ ] __Style everything I have now (on the main page).__
-    - [ ] Make sure the nav as it is in components is accessable through tabs in a dropdown.
-    - [ ] Make the remaining assignments from last week from the CSS book. 
-    - [ ] Add the grid in the media queries.
-    - [ ] Figure out how to make a carousel that is accessable through tabs. (tabindex)
-- [ ] __This weeks assignments (at least read them all).__
+    - [x] Make sure the nav as it is in components is accessable through tabs in a dropdown.
+    - [ ] Make the remaining assignments from last week from the CSS book.
+    - [x] Use custom properties for the colors. 
+    - [x] Add the grid in the media queries.
+    - [x] Make sure the page is styled for :focus
+- [ ] __This weeks assignments (at least read them all).__ (read but not used yet)
     - [ ] Loading spinner — 8.43
     - [ ] Transitions op :hovers en :focus—8.42
     - [ ] Cursor—6.29
@@ -91,15 +92,15 @@ This week, it's a lot more clear as what to do for the final assignment. Sadly, 
     - [ ] [Validatie van het formulier](https://codepen.io/joostf/pen/VKyPxk)
 
 ##### 13 or 14 or 15 / 02
-- [ ] __Read the articles for CSSTTR and make sketchnotes.__
-    - [ ] [CSS inheritance](https://www.smashingmagazine.com/2016/11/css-inheritance-cascade-global-scope-new-old-worst-best-friends/)
-    - [ ] [Semantic CSS and selectors](https://www.smashingmagazine.com/2013/08/semantic-css-with-intelligent-selectors/)
-    - [ ] [Semantic CSS and the framework](https://www.ebayinc.com/stories/blogs/tech/how-our-css-framework-helps-enforce-accessibility/)
+- [x] __Read the articles for CSSTTR and make sketchnotes.__
+    - [x] [CSS inheritance](https://www.smashingmagazine.com/2016/11/css-inheritance-cascade-global-scope-new-old-worst-best-friends/)
+    - [x] [Semantic CSS and selectors](https://www.smashingmagazine.com/2013/08/semantic-css-with-intelligent-selectors/)
+    - [x] [Semantic CSS and the framework](https://www.ebayinc.com/stories/blogs/tech/how-our-css-framework-helps-enforce-accessibility/)
 
 ##### 15/02
 - [ ] __Finish the log-in field.__
     - [ ] Fancy transitions and :focus
-    - [ ] Clear transitions that actually help the user
+    - [ ] Make clear transitions that actually help the user
 - [ ] __Work out the detail-page.__
     - [ ] Accessable through tabs
     - [ ] Make sure all the HTML is correct
@@ -114,3 +115,116 @@ This week, it's a lot more clear as what to do for the final assignment. Sadly, 
 ##### 16/02 
 - [ ] __Push everything on a new branch before 09:37!!!__
 
+## A few things I did and learned this week:
+
+###### 1: 
+##### The nav, accessable through tabs with a dropdown and skip to main
+
+First, I styled the a elements in the nav that direct to some element in the main. 
+
+```css
+a[href="#main"] {
+    position: relative;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    z-index:-10;
+}
+a[href="#main"]:focus,
+a[href="#main"]:active {
+    width: auto;
+    height: auto;
+    overflow: visible;
+    z-index: 10;
+}
+```
+The a element has no width or height and has a negative index, just to be sure. Then, on focus and active, the width and height are given. The elements are only visible when using tab, because this applies only to users who will perfer this on the mouse.
+
+Seconldly, I made a dropdown in the nav that is keyboard accessable. The nav is made up like this: 
+```css
+nav > ul > li > a > ul > li > a
+```
+I had to make sure I only select the last ul to make invisible. I decided to use display: none, since this tab can be directed through the previous a element. The CSS looks like this:
+```CSS
+ul li ul li a {
+    display: none;
+    visibility: hidden;
+ }
+
+ul li:focus-within ul li a,
+ul li:hover ul li a {
+    display: inline-block;
+    visibility: visible;
+    position: relative;
+ }
+ ```
+ The display: none hides the text and visibility: hidden makes sure all styling that comes with li or ul are eliminated. Then I select the ul, only if the previous a is hovered or focussed. This way, I can make the a drop down by touching the li in the nav.
+
+###### 2:
+##### A fancy underline with transition under the active a element.
+
+On the li a selector, I added text-decoration: none and padding: 0.5em. Then I added an ::after and put some empty content in display: block and a transition for width. Then I added another li a, this time with :focus::after and :hover::after. In here, I only put width: 100% to show the ::after element only on these states and creating a fat underline with a small transition.
+```CSS
+li a {
+    padding: 0.5em;
+    display: inline-block;
+    color: var(--light);
+    text-decoration: none;
+    font-size: 0.7em;
+}
+
+li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: currentColor;
+    transition: width .3s;
+}
+
+li a:focus::after,
+li a:hover::after {
+    width: 100%;
+}
+```
+###### Step 1: 
+##### Things I don't get to show off yet
+
+Other things I did where figuring out the CSS Grid and starting with custom properties. The CSS Grid works as it should right now, but the next step is to add grid-areas so the elements don't have to be defined in every mediaquery. They can be given a grid-area once, to later only edit the grid layout on main.
+
+The custom properties are working well, even though I didn't really do anything yet to prove why it's so powerfull. First, I have to finish up the styling and the practices from the book.
+
+## Week 3 CSSTTR
+
+Everything has to be finished in just a week, so it's important to keep track with what I still need to do. Set priorities straight and keep to this planning. 
+
+#### Weekly planning
+
+##### 22/02
+- [ ] __Complete the homepage.__
+    - [x] Make it pretty
+    - [ ] Write some more content
+    - [x] Watch the semantic markup.
+    - [ ] Add all the pages I want to make and write some content so the components make sense.
+- [ ] __Implement all practices from the book.__
+    - [ ] Custom checkboxes (form)
+    - [ ] Extending clickable area (the articles and maybe step-indicator)
+    - [ ] Dimming (want to use this on the detail to direct to the rating)
+    - [ ] Blurring (same as above)
+    - [ ] Intrinsic sizing (the figure element)
+    - [ ] Transitions (everywhere!)
+    - [ ] Loading spinner (after logging in)
+- [ ] __Finish the log-in field.__
+    - [ ] Fancy transitions and :focus
+    - [ ] Make clear transitions that actually help the user
+    - [ ] Use the practices from the book to help with the checkboxes
+    - [ ] Use styling to validate the form
+- [ ] __Work out the detail-page.__
+    - [ ] Accessable through tabs
+    - [ ] Make sure all the HTML is correct
+    - [ ] Style it, use practices from book
+    - [ ] Add the rating component and style it.
+- [ ] __Style the chatbox-component.__
+    - [ ] Give more styling
+    - [ ] Make accessable (figure out how)
