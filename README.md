@@ -1,3 +1,5 @@
+#### [Link to pages here](https://leoniesmits.github.io/cssttr/)
+
 ### Week 1 CSSTTR
 
 This week we got started with CSSTTR. We are expected to build a keyboard-accessible website, made for Marijn as the user of this site. Marijn is a great programmer and loves beautiful design. He also has some physical constraints. The given components have to be styled accordingly, using only CSS. 
