@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8">
+	<title>Log in</title>
+	<link rel="stylesheet" type="text/css" href="styles/index.css">
+	<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
+</head>
+
+<body>
+    <a href="#main">Skip to main content</a>
+
+    <nav>
+        <ul>
+            <li><a href="#main">Skip to main content</a></li>
+            <li><a href="#chat">Use chatbot</a></li>
+            <li><a href="#main-content" aria-label="Home, current page">Home</a></li>
+            <li>
+                <a href="/products">Products</a>
+                <ul>
+                    <li><a href="/products/playlists">Playlists</a></li>
+                    <li><a href="/products/songs">Songs</a></li>
+                    <li><a href="/products/artists">Artists</a></li>
+                    <li><a href="/products/labels">Labels</a></li>
+                </ul>
+            </li>
+            <li><a href="/cart">Shopping Cart</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </nav>
+        
+    <main id="main" tabindex="-1">
+        <form action="/" method="post">
+
+            <label for="field-email">Email</label>
+            <input type="email" id="field-email" name="field-email" autocomplete="email" required autofocus>
+        
+            <label for="field-password">Password</label>
+            <input type="password" id="field-password" name="field-password" required>
+        
+            <input type="checkbox" id="field-stay-logged-in" name="field-stay-logged-in" value="stay-logged-in">
+            <label for="field-stay-logged-in">Stay logged in</label>
+        
+            <a href="/">Forgot password</a>
+        
+            <button type="submit">Login</button>
+        
+        </form>
+    
+    </main>
+</body>
