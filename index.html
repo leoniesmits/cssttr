@@ -1,60 +1,206 @@
 <!DOCTYPE html>
 <head>
-	<meta charset="utf-8">
-	<title>CSS to the rescue</title>
-	<link rel="stylesheet" type="text/css" href="styles/index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Living Styleguide</title>
+    <link rel="stylesheet" type="text/css" href="styles/index.css">
+    <link rel="stylesheet" type="text/css" href="styles/revenge.css">
 	<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Oswald">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
 
 <body id="body">
-    <a href="#main">Skip to main content</a>
+   
 
     <nav>
-        <h1>Main navigation</h1>
-
         <ul>
+            <li><a href="#main">Skip to main content</a></li>
+            <li><a href="#chat">Use chatbot</a></li>
             <li><a href="#main-content" aria-label="Home, current page">Home</a></li>
             <li>
                 <a href="/products">Products</a>
                 <ul>
-                    <li><a href="/products/rock">Rock</a></li>
-                    <li><a href="/products/paper">Paper</a></li>
-                    <li><a href="/products/scissors">Scissors</a></li>
+                    <li><a href="/products/playlists">Playlists</a></li>
+                    <li><a href="/products/songs">Songs</a></li>
+                    <li><a href="/products/artists">Artists</a></li>
+                    <li><a href="/products/labels">Labels</a></li>
                 </ul>
             </li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/contact">Contact</a></li>
+            <li><a href="/cart">Shopping Cart</a></li>
             <li><a href="login.html">Login</a></li>
         </ul>
     </nav>
-        
-    <main id="main" tabindex="1">
-        <h1>The main content <span>&amp;</span> other stuff</h1>
-        <article>
-            <h1><a href="detail.html">HTML5 accessibility, are block links hurting accessibility?</a></h1>
-        
-            <img src="https://vasilis.nl/voto/fotos/klein/161001180558-de-boot-gemist-150.jpg" alt="A colorful crayon drawing on the hood of a car." />
-        
-            <p>It is conforming in HTML5 for links to include block level elements such as headings and paragraphs, this was forbidden in previous versions of HTML. A recent article by @feather concludes that the inclusion of block level elements inside a link causes some Assistive Technology (AT) to misbehave.</p>
-        </article>
-        <article>
-            <h1><a href="detail.html">HTML5 accessibility, are block links hurting accessibility?</a></h1>
-        
-            <img src="https://vasilis.nl/voto/fotos/klein/161001180558-de-boot-gemist-150.jpg" alt="A colorful crayon drawing on the hood of a car." />
-        
-            <p>It is conforming in HTML5 for links to include block level elements such as headings and paragraphs, this was forbidden in previous versions of HTML. A recent article by @feather concludes that the inclusion of block level elements inside a link causes some Assistive Technology (AT) to misbehave.</p>
-        </article>        
-        <article>
-            <h1><a href="detail.html">HTML5 accessibility, are block links hurting accessibility?</a></h1>
-        
-            <img src="https://vasilis.nl/voto/fotos/klein/161001180558-de-boot-gemist-150.jpg" alt="A colorful crayon drawing on the hood of a car." />
-        
-            <p>It is conforming in HTML5 for links to include block level elements such as headings and paragraphs, this was forbidden in previous versions of HTML. A recent article by @feather concludes that the inclusion of block level elements inside a link causes some Assistive Technology (AT) to misbehave.</p>
-        </article>
+    <header role="banner">
+        <h1>The main content &amp; other stuff</h1>
+    </header>
+    <main id="main" tabindex="-1">
 
         <section>
+            <h1>This section has a title</h1>
+                <article>
+                    <a href="detail-playlist.html">
+                        <h1>The Queen Is Dead</h1>
+                    
+                        <img src="https://i.pinimg.com/564x/a1/93/1d/a1931d3918058e7119c994840647e6d9.jpg" alt="A colorful crayon drawing on the hood of a car." />
+                    
+                        <p>It is conforming in HTML5 for links to include block level elements such as headings and paragraphs, this was forbidden in previous versions of HTML. A recent article by @feather concludes that the inclusion of block level elements inside a link causes some Assistive Technology (AT) to misbehave.</p>
+                    </a>
+                </article>
+                <article>
+                        <a href="detail-playlist.html">
+                        <h1>Tango In The Night</h1>
+                    
+                        <img src="https://i.pinimg.com/564x/ad/81/34/ad8134f2d6257937be72764316d36f39.jpg" alt="A colorful crayon drawing on the hood of a car." />
+                    
+                        <p>It is conforming in HTML5 for links to include block level elements such as headings and paragraphs, this was forbidden in previous versions of HTML. A recent article by @feather concludes that the inclusion of block level elements inside a link causes some Assistive Technology (AT) to misbehave.</p>
+                        </a>
+                    </article>        
+                    <article>
+                        <a href="detail-playlist.html">
+                        <h1>Below The Waste</h1>
+                    
+                        <img src="https://vignette.wikia.nocookie.net/lyricwiki/images/c/c6/Art_Of_Noise_-_Below_The_Waste.jpg/revision/latest?cb=20130324095217" alt="A colorful crayon drawing on the hood of a car." />
+                    
+                        <p>It is conforming in HTML5 for links to include block level elements such as headings and paragraphs, this was forbidden in previous versions of HTML. A recent article by @feather concludes that the inclusion of block level elements inside a link causes some Assistive Technology (AT) to misbehave.</p>
+                        </a>
+                    </article>
+                    <article>
+                        <a href="detail-playlist.html">
+                        <h1>Out Of The Blue</h1>
+                    
+                        <img src="https://i.pinimg.com/564x/ab/76/de/ab76decb37b19d3bd4e552d076a3a04e.jpg" alt="A colorful crayon drawing on the hood of a car." />
+                    
+                        <p>It is conforming in HTML5 for links to include block level elements such as headings and paragraphs, this was forbidden in previous versions of HTML. A recent article by @feather concludes that the inclusion of block level elements inside a link causes some Assistive Technology (AT) to misbehave.</p>
+                        </a>
+                    </article>
+                     <article>
+                        <a href="detail-playlist.html">
+                        <h1>Luan</h1>
+                    
+                        <img src="https://i.pinimg.com/564x/ae/79/9b/ae799b0e7d8833dbcc45773cd4aab27e.jpg" alt="A colorful crayon drawing on the hood of a car." />
+                    
+                        <p>It is conforming in HTML5 for links to include block level elements such as headings and paragraphs, this was forbidden in previous versions of HTML. A recent article by @feather concludes that the inclusion of block level elements inside a link causes some Assistive Technology (AT) to misbehave.</p>
+                        </a>
+                    </article>
+                    <article>
+                        <a href="detail-playlist.html">
+                        <h1>Flag</h1>
+                    
+                        <img src="https://img.discogs.com/5AslpbRNxmCl7XKWNk4T6ysk5ac=/fit-in/600x581/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-162808-1219181580.jpeg.jpg" alt="A colorful crayon drawing on the hood of a car." />
+                    
+                        <p>It is conforming in HTML5 for links to include block level elements such as headings and paragraphs, this was forbidden in previous versions of HTML. A recent article by @feather concludes that the inclusion of block level elements inside a link causes some Assistive Technology (AT) to misbehave.</p>
+                        </a>
+                    </article>
+                    <article>
+                        <a href="detail-playlist.html">
+                        <h1>Purple Rain</h1>
+                    
+                        <img src="https://i.pinimg.com/564x/82/00/81/82008194b14544e1a83878f769f93132.jpg" alt="A colorful crayon drawing on the hood of a car." />
+                    
+                        <p>It is conforming in HTML5 for links to include block level elements such as headings and paragraphs, this was forbidden in previous versions of HTML. A recent article by @feather concludes that the inclusion of block level elements inside a link causes some Assistive Technology (AT) to misbehave.</p>
+                        </a>
+                    </article>
+                     <article>
+                        <a href="detail-playlist.html">
+                        <h1>M&J</h1>
+                    
+                        <img src="https://i.pinimg.com/564x/44/2a/78/442a784a36cff2def4e6d688c677816d.jpg" alt="A colorful crayon drawing on the hood of a car." />
+                    
+                        <p>It is conforming in HTML5 for links to include block level elements such as headings and paragraphs, this was forbidden in previous versions of HTML. A recent article by @feather concludes that the inclusion of block level elements inside a link causes some Assistive Technology (AT) to misbehave.</p>
+                        </a>
+                    </article>
+        </section>
+
+        <section>
+            <h1>This section as a title aswell :D</h1>
+            <article>
+                <h1>This picture has a title</h1>
+                <figure>
+                    <!-- Portrait -->
+                    <img src="https://vasilis.nl/voto/fotos/klein/170126170241-we-hebben-een-bortusk-1280.jpg" alt="A drawing of a colorful monster on a newspaper" />
+                    
+                    <!-- Landscape -->
+                    <!-- <img src="https://vasilis.nl/voto/fotos/klein/161001174911-verhuizen-1280.jpg" alt="A bulldozer transporting a beach house along a sunny beach" /> -->
+                    <figcaption>
+                        <p>
+                            There's also this big and in depth description of the picture. You often see this on newssites or photo blogs. You could also replace the photo with a video if needed.
+                        </p>
+                        <footer>
+                            <time datetime="2017-02-06">6-2-2017</time> © 2017 <a href="https://vasilis.nl">Vasilis van Gemert</a>
+                        </footer>
+                    </figcaption>
+                </figure>
+            </article>
+            <article>
+                <h1>This picture has a title</h1>
+                <figure>
+                    <!-- Portrait -->
+                    <img src="https://vasilis.nl/voto/fotos/klein/170126170241-we-hebben-een-bortusk-1280.jpg" alt="A drawing of a colorful monster on a newspaper" />
+                    
+                    <!-- Landscape -->
+                    <!-- <img src="https://vasilis.nl/voto/fotos/klein/161001174911-verhuizen-1280.jpg" alt="A bulldozer transporting a beach house along a sunny beach" /> -->
+                    <figcaption>
+                        <p>
+                            There's also this big and in depth description of the picture. You often see this on newssites or photo blogs. You could also replace the photo with a video if needed.
+                        </p>
+                        <footer>
+                            <time datetime="2017-02-06">6-2-2017</time> © 2017 <a href="https://vasilis.nl">Vasilis van Gemert</a>
+                        </footer>
+                    </figcaption>
+                </figure>
+            </article>
+        </section>
+        <section id="chat" tabindex="-1">
+            <h1>Chat with bot</h1>
+            <ol>
+                <li>
+            
+                    <p>
+                        Hey!
+                    </p>
+            
+                    <footer>
+                        <p>Posted on <time datatime="2015-01-22T10:25">10:25 AM</time> by you</p>
+                        <p data-status="READ">Has been read</p>
+                    </footer>
+            
+                </li>
+                <li>
+            
+                    <p>
+                        Hey! Sorry I was busy
+                    </p>
+            
+                    <footer>
+                        <p>Posted on <time datatime="2017-02-03T14:19">2:19 PM</time> by John</p>
+                    </footer>
+            
+                </li>
+                <li>
+            
+                    <p>
+                        I sent that 2 years ago
+                    </p>
+            
+                    <footer>
+                        <p>Posted on <time datatime="2017-02-03T14:22">2:22 PM</time> by you</p>
+                        <p data-status="DELIVERED">Has been delivered</p>
+                    </footer>
+            
+                </li>
+            </ol>
+            
+            <form action="/" method="post">
+            
+                <label for="field-message">Message</label>
+                <textarea name="field-message" id="field-message"></textarea>
+            
+                <button type="submit">Send</button>
+            
+            </form>
+        </section>
+        <aside>
             <nav>
                 <h1>Finish your order</h1>
             
@@ -75,9 +221,10 @@
                     </li>
                 </ol>
             </nav>
-        </section>
+        </aside>
     </main>
     <a href="#body">Back to top</a>
-
-
+    <footer role="contentinfo">
+        Some info here
+    </footer>
 </body>
