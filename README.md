@@ -160,6 +160,7 @@ ul li:hover ul li a {
  }
  ```
  The display: none hides the text and visibility: hidden makes sure all styling that comes with li or ul are eliminated. Then I select the ul, only if the previous a is hovered or focussed. This way, I can make the a drop down by touching the li in the nav.
+![preview of the nav](images/previewnav.png)
 
 ###### 2:
 ##### A fancy underline with transition under the active a element.
@@ -194,6 +195,7 @@ li a:hover::after {
 Other things I did where figuring out the CSS Grid and starting with custom properties. The CSS Grid works as it should right now, but the next step is to add grid-areas so the elements don't have to be defined in every mediaquery. They can be given a grid-area once, to later only edit the grid layout on main.
 
 The custom properties are working well, even though I didn't really do anything yet to prove why it's so powerfull. First, I have to finish up the styling and the practices from the book.
+![preview of the grid](images/previewgrid.png)
 
 ## Week 3 CSSTTR
 
