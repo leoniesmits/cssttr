@@ -1,5 +1,3 @@
-#### [Link to pages here](https://leoniesmits.github.io/cssttr/)
-
 ### Week 1 CSSTTR
 
 This week we got started with CSSTTR. We are expected to build a keyboard-accessible website, made for Marijn as the user of this site. Marijn is a great programmer and loves beautiful design. He also has some physical constraints. The given components have to be styled accordingly, using only CSS. 
@@ -162,7 +160,6 @@ ul li:hover ul li a {
  }
  ```
  The display: none hides the text and visibility: hidden makes sure all styling that comes with li or ul are eliminated. Then I select the ul, only if the previous a is hovered or focussed. This way, I can make the a drop down by touching the li in the nav.
-![preview of the nav](images/previewnav.png)
 
 ###### 2:
 ##### A fancy underline with transition under the active a element.
@@ -197,7 +194,6 @@ li a:hover::after {
 Other things I did where figuring out the CSS Grid and starting with custom properties. The CSS Grid works as it should right now, but the next step is to add grid-areas so the elements don't have to be defined in every mediaquery. They can be given a grid-area once, to later only edit the grid layout on main.
 
 The custom properties are working well, even though I didn't really do anything yet to prove why it's so powerfull. First, I have to finish up the styling and the practices from the book.
-![preview of the grid](images/previewgrid.png)
 
 ## Week 3 CSSTTR
 
@@ -208,22 +204,22 @@ Everything has to be finished in just a week, so it's important to keep track wi
 ##### 22/02
 - [ ] __Complete the homepage.__
     - [x] Make it pretty
-    - [ ] Write some more content
+    - [x] Write some more content
     - [x] Watch the semantic markup.
     - [ ] Add all the pages I want to make and write some content so the components make sense.
 - [ ] __Implement all practices from the book.__
-    - [ ] Custom checkboxes (form)
+    - [x] Custom checkboxes (form)
     - [ ] Extending clickable area (the articles and maybe step-indicator)
     - [ ] Dimming (want to use this on the detail to direct to the rating)
-    - [ ] Blurring (same as above)
+    - [x] Blurring (same as above)
     - [ ] Intrinsic sizing (the figure element)
-    - [ ] Transitions (everywhere!)
-    - [ ] Loading spinner (after logging in)
+    - [x] Transitions (everywhere!)
+    - [x] Loading spinner (after logging in)
 - [ ] __Finish the log-in field.__
-    - [ ] Fancy transitions and :focus
-    - [ ] Make clear transitions that actually help the user
-    - [ ] Use the practices from the book to help with the checkboxes
-    - [ ] Use styling to validate the form
+    - [x] Fancy transitions and :focus
+    - [x] Make clear transitions that actually help the user
+    - [x] Use the practices from the book to help with the checkboxes
+    - [x] Use styling to validate the form
 - [ ] __Work out the detail-page.__
     - [ ] Accessable through tabs
     - [ ] Make sure all the HTML is correct
@@ -232,3 +228,16 @@ Everything has to be finished in just a week, so it's important to keep track wi
 - [ ] __Style the chatbox-component.__
     - [ ] Give more styling
     - [ ] Make accessable (figure out how)
+
+#### End of week 3
+
+As seen in the planning checklist above, my work isn't finished at all. I think the reason is me starting with the work way too late. I was too busy reading all articles about practices that were new for me and underestimated how long it would take to finish the project. I feel really sad about this.
+
+#### Login form
+
+The log in form took up the most time, because I wanted to make the labels move to the top of the input when text is typed in. Without javascript, this is very hard to do. The problem I had was mostly caused by the requirement on the e-mail input. In examples I've seen, the styling for labels without input with them, are styled to be down. Then with pseudeo-selectors :focus and :valid, the label is styled to go above the text and stays there after the user stopped typing and isn't focussing anymore. The problem with required email inputs, is that there has to be specific text. So after focussing, the :valid selector isn't active to let the label stay up and it overlays the input the user has typed. 
+
+Something that can be used is the pseudo-class :placeholder-shown. This checks if the placeholder is shown, which happens when the input is empty. Perfect for my problem right? No. It's not supported and I unfortunately couldn't make it work. The plan was to use input:not(:placeholder-shown) + label and then style the label for when the user has typed something. 
+
+My solution right now is a shitty one. This problem has taken up 2 days now, so even if it took a few more hours I just had to fix it. Right now, the :valid and :invalid state for the input of e-mail are the same. Because this element has auto-focus I figured this wouldn't stand out that much, as the user starts typing immediately. 
+
