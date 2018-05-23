@@ -241,3 +241,30 @@ Something that can be used is the pseudo-class :placeholder-shown. This checks i
 
 My solution right now is a shitty one. This problem has taken up 2 days now, so even if it took a few more hours I just had to fix it. Right now, the :valid and :invalid state for the input of e-mail are the same. Because this element has auto-focus I figured this wouldn't stand out that much, as the user starts typing immediately. 
 
+##### 23/05
+- [ ] __Complete the homepage.__
+    - [x] Make it pretty
+    - [x] Write some more content
+    - [x] Watch the semantic markup.
+    - [x] Add all the pages I want to make and write some content so the components make sense.
+- [ ] __Implement all practices from the book.__
+    - [x] Custom checkboxes (form)
+    - [x] Extending clickable area (the articles and maybe step-indicator)
+    - [x] Dimming (want to use this on the detail to direct to the rating)
+    - [x] Blurring (same as above)
+    - [x] Intrinsic sizing (the figure element)
+    - [x] Transitions (everywhere!)
+    - [x] Loading spinner (after logging in)
+- [ ] __Finish the log-in field.__
+    - [x] Fancy transitions and :focus
+    - [x] Make clear transitions that actually help the user
+    - [x] Use the practices from the book to help with the checkboxes
+    - [x] Use styling to validate the form
+- [ ] __Work out the detail-page.__
+    - [x] Accessable through tabs
+    - [x] Make sure all the HTML is correct
+    - [x] Style it, use practices from book
+    - [x] Add the rating component and style it.
+- [ ] __Style the chatbox-component.__
+    - [x] Give more styling
+    - [x] Make accessable (figure out how)

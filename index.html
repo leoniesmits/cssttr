@@ -2,9 +2,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
-    <title>Living Styleguide</title>
+    <title>Save The Bees!</title>
+    <link rel="shortcut icon" type="image/png" href="images/bee.png"/>
+
     <link rel="stylesheet" type="text/css" href="styles/index.css">
-    <link rel="stylesheet" type="text/css" href="styles/revenge.css">
+    <!-- <link rel="stylesheet" type="text/css" href="styles/revenge.css"> -->
 	<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Oswald">
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
@@ -12,8 +14,8 @@
 
 <body id="body">
     <article id="login">
-        <a href="#body">Back to home</a>
-        <form action="/" method="post">
+        <a href="#">✖</a>
+        <form action="/" method="get">
             <div>
                 <input type="email" id="field-email" name="field-email" autocomplete="email" required autofocus>
                 <label for="field-email">Email</label><i>.</i>
@@ -28,185 +30,671 @@
                 <a href="/">Forgot password</a>
             
                 <button type="submit">Login</button>
+
+                <div>
+                    <div role="text">Loading</div>
+                </div>
             
             </form>
         </article>
 
-    <nav>
+    <nav id="menu">
+        <a href="#menu">Menu</a>
+        <a href="#body">Close</a>
         <ul>
             <li><a href="#main">Skip to main content</a></li>
             <li><a href="#chat">Use chatbot</a></li>
             <li><a href="#home" aria-label="Home, current page">Home</a></li>
             <li>
-                <a href="/products">Products</a>
+                <a href="/help">How to help</a>
                 <ul>
-                    <li><a href="/products/playlists">Playlists</a></li>
-                    <li><a href="/products/songs">Songs</a></li>
-                    <li><a href="/products/artists">Artists</a></li>
-                    <li><a href="/products/labels">Labels</a></li>
+                    <li><a href="/help#plant">Planting</a></li>
+                    <li><a href="/help#buy">Buying</a></li>
+                    <li><a href="/help#protest">Sign the petition</a></li>
                 </ul>
             </li>
-            <li><a href="/cart">Shopping Cart</a></li>
+            <li><a href="/garden">My Garden</a></li>
             <li><a href="#login">Login</a></li>
         </ul>
     </nav>
     <header role="banner">
-            <h1>The main content &amp; other stuff</h1>
+            <h1>Saving the bees &amp; ourselves</h1>
+            <figure>
+				<video loop muted autoplay>
+				  <source src="./images/beemovie.mp4" type="video/mp4">
+				</video>
+			</figure>
         </header>
-    <main id="main" tabindex="-1">
+    <main id="main">
+        <article>
+            <p>Since the late 1990s, beekeepers around the world have observed the mysterious and sudden disappearance of bees, and report unusually high rates of decline in honeybee colonies.</p>
+            <blockquote>“If wild pollinator declines continue, we run the risk of losing a substantial proportion of the world’s flora”</blockquote>
+            <p>Bees make more than honey – they are key to food production because they pollinate crops. Bumblebees, other wild bees, and insects like butterflies, wasps, and flies all provide valuable pollination services. A third of the food that we eat depends on pollinating insects: vegetables like zucchini, fruits like apricot, nuts like almonds, spices like coriander, edible oils like canola, and many more… In Europe alone, the growth of over 4,000 vegetables depends on the essential work of pollinators. But currently, more and more bees are dying. The bee decline affects mankind too. Our lives depend on theirs.</p>
+        </article>
+        <aside>
+            <nav>
+                <h1>How are the bees doing right now?</h1>
+            
+                <progress value="0.25" max="1">25%</progress>
+            
+                <ol>
+                    <li>
+                        <a href="/cart">Not good</a>
+                    </li>
+                    <li>
+                        <a href="#main-content" aria-label="Address, current step">Meh</a>
+                    </li>
+                    <li>
+                        Better
+                    </li>
+                    <li>
+                        Good
+                    </li>
+                </ol>
+            </nav>
 
+        </aside>
         <section>
             <h1>Awesome albums of the 80's</h1>
                 <article>
-                    <a href="#detail">
+                    <a href="#article1">
                         <h1>The Queen Is Dead</h1>
                     
-                        <img src="https://i.pinimg.com/564x/a1/93/1d/a1931d3918058e7119c994840647e6d9.jpg" alt="A colorful crayon drawing on the hood of a car." />
+                        <img src="https://i.pinimg.com/564x/a1/93/1d/a1931d3918058e7119c994840647e6d9.jpg" alt="Coverphoto of the album" />
                     
-                        <p>It is conforming in HTML5 for links to include block level elements such as headings and paragraphs, this was forbidden in previous versions of HTML. A recent article by @feather concludes that the inclusion of block level elements inside a link causes some Assistive Technology (AT) to misbehave.</p>
+                        <p>For when you're not happy and not sad.</p>
                     </a>
                 </article>
+                <article id="article1">
+                    	<a href="#">✖</a>
+                        <figure>
+                            <!-- Portrait -->
+                            <img src="https://i.pinimg.com/564x/a1/93/1d/a1931d3918058e7119c994840647e6d9.jpg" alt="Coverphoto of the album" />
+                            
+                            <!-- Landscape -->
+                            <!-- <img src="https://vasilis.nl/voto/fotos/klein/161001174911-verhuizen-1280.jpg" alt="A bulldozer transporting a beach house along a sunny beach" /> -->
+                            <figcaption>
+                                <h1>This picture has a title</h1>
+                                <p>
+                                    There's also this big and in depth description of the picture. You often see this on newssites or photo blogs. You could also replace the photo with a video if needed.
+                                </p>
+                                <footer>
+                                    <time datetime="2017-02-06">6-2-2017</time> © 2017 <a href="https://vasilis.nl">Vasilis van Gemert</a>
+                                </footer>
+                            </figcaption>
+                            <fieldset>
+                                    <legend>Is this the bees knees?</legend>
+                
+                                    <input type="radio" name="rating" id="rating-0">
+                                    <label for="rating-0">
+                                        Sad!
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
+                                            <circle cx="32" cy="32" r="30" fill="#ef5350" />
+                                            <path d="m41 49.7c-5.8-4.8-12.2-4.8-18 0-.7.6-1.3-.4-.8-1.3 1.8-3.4 5.3-6.5 9.8-6.5s8.1 3.1 9.8 6.5c.5.8-.1 1.8-.8 1.3" fill="#302424"
+                                            />
+                                            <path d="m10.2 24.9c-1.5 4.7.6 10 5.3 12.1 4.6 2.2 10 .5 12.7-3.7l-6.9-7.7-11.1-.7" fill="#fff" />
+                                            <g fill="#302424">
+                                                <path d="m14.2 25.8c-1.4 2.9-.1 6.4 2.8 7.7 2.9 1.4 6.4.1 7.7-2.8 1-1.9-9.6-6.8-10.5-4.9" />
+                                                <path d="m10.2 24.9c1.6-1 3.5-1.5 5.4-1.5 1.9 0 3.8.5 5.6 1.3 1.7.8 3.3 2 4.6 3.4 1.2 1.5 2.2 3.2 2.4 5.1-1.3-1.3-2.6-2.4-4-3.4-1.4-1-2.8-1.8-4.2-2.4-1.5-.7-3-1.2-4.6-1.7-1.8-.3-3.4-.6-5.2-.8"
+                                                />
+                                            </g>
+                                            <path d="m53.8 24.9c1.5 4.7-.6 10-5.3 12.1-4.6 2.2-10 .5-12.7-3.7l6.9-7.7 11.1-.7" fill="#fff" />
+                                            <g fill="#302424">
+                                                <path d="m49.8 25.8c1.4 2.9.1 6.4-2.8 7.7-2.9 1.4-6.4.1-7.7-2.8-1-1.9 9.6-6.8 10.5-4.9" />
+                                                <path d="m53.8 24.9c-1.6-1-3.5-1.5-5.4-1.5-1.9 0-3.8.5-5.6 1.3-1.7.8-3.3 2-4.6 3.4-1.2 1.5-2.2 3.2-2.4 5.1 1.3-1.3 2.6-2.4 4-3.4 1.4-1 2.8-1.8 4.2-2.4 1.5-.7 3-1.2 4.6-1.7 1.8-.3 3.4-.6 5.2-.8"
+                                                />
+                                            </g>
+                                        </svg>
+                                    </label>
+                
+                                    <input type="radio" name="rating" id="rating-1">
+                                    <label for="rating-1">
+                                        Meh
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
+                                            <path d="m2.5 37.2c2.9 16.3 18.4 27.2 34.8 24.3 16.3-2.9 27.2-18.4 24.3-34.8-2.9-16.2-18.5-27.1-34.8-24.2-16.3 2.8-27.2 18.4-24.3 34.7"
+                                             fill="#ffdd67" />
+                                            <g fill="#664e27">
+                                                <circle cx="42.4" cy="24.7" r="5" />
+                                                <circle cx="19.7" cy="28.7" r="5" />
+                                                <path d="m43.3 41.8c-5.8-1.5-12-.4-16.9 3-1.2.9 1.1 4 2.3 3.2 3.2-2.3 8.4-3.8 13.7-2.4 1.3.3 2.4-3.3.9-3.8" />
+                                            </g>
+                                        </svg>
+                                    </label>
+                
+                                    <input type="radio" name="rating" id="rating-2">
+                                    <label for="rating-2">
+                                        Nice
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
+                                            <circle cx="32" cy="32" r="30" fill="#ffdd67" />
+                                            <g fill="#664e27">
+                                                <circle cx="20.5" cy="26.6" r="5" />
+                                                <circle cx="43.5" cy="26.6" r="5" />
+                                                <path d="m44.6 40.3c-8.1 5.7-17.1 5.6-25.2 0-1-.7-1.8.5-1.2 1.6 2.5 4 7.4 7.7 13.8 7.7s11.3-3.6 13.8-7.7c.6-1.1-.2-2.3-1.2-1.6"
+                                                />
+                                            </g>
+                                        </svg>
+                                    </label>
+                
+                                    <input type="radio" name="rating" id="rating-3">
+                                    <label for="rating-3">
+                                        Fantastic!
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
+                                            <circle cx="32" cy="32" r="30" fill="#ffdd67" />
+                                            <path d="m49.7 34.4c-.4-.5-1.1-.4-1.9-.4-15.8 0-15.8 0-31.6 0-.8 0-1.5-.1-1.9.4-3.9 5 .7 19.6 17.7 19.6 17 0 21.6-14.6 17.7-19.6"
+                                             fill="#664e27" />
+                                            <path d="m33.8 41.7c-.6 0-1.5.5-1.1 2 .2.7 1.2 1.6 1.2 2.8 0 2.4-3.8 2.4-3.8 0 0-1.2 1-2 1.2-2.8.3-1.4-.6-2-1.1-2-1.6 0-4.1 1.7-4.1 4.6 0 3.2 2.7 5.8 6 5.8 3.3 0 6-2.6 6-5.8-.1-2.8-2.7-4.5-4.3-4.6"
+                                             fill="#4c3526" />
+                                            <path d="m24.3 50.7c2.2 1 4.8 1.5 7.7 1.5 2.9 0 5.5-.6 7.7-1.5-2.1-1.1-4.7-1.7-7.7-1.7s-5.6.6-7.7 1.7" fill="#ff717f" />
+                                            <path d="m47 36c-15 0-15 0-29.9 0-2.1 0-2.1 4-.1 4 10.4 0 19.6 0 30 0 2 0 2-4 0-4" fill="#fff" />
+                                            <g fill="#664e27">
+                                                <circle cx="20.5" cy="23" r="5" />
+                                                <circle cx="43.5" cy="23" r="5" />
+                                            </g>
+                                        </svg>
+                                    </label>
+                                </fieldset>
+                        </figure>
+                </article>
                 <article>
-                        <a href="#detail">
-                        <h1>Tango In The Night</h1>
-                    
-                        <img src="https://i.pinimg.com/564x/ad/81/34/ad8134f2d6257937be72764316d36f39.jpg" alt="A colorful crayon drawing on the hood of a car." />
-                    
-                        <p>It is conforming in HTML5 for links to include block level elements such as headings and paragraphs, this was forbidden in previous versions of HTML. A recent article by @feather concludes that the inclusion of block level elements inside a link causes some Assistive Technology (AT) to misbehave.</p>
-                        </a>
-                    </article>        
-                    <article>
-                        <a href="#detail">
-                        <h1>Below The Waste</h1>
-                    
-                        <img src="https://vignette.wikia.nocookie.net/lyricwiki/images/c/c6/Art_Of_Noise_-_Below_The_Waste.jpg/revision/latest?cb=20130324095217" alt="A colorful crayon drawing on the hood of a car." />
-                    
-                        <p>It is conforming in HTML5 for links to include block level elements such as headings and paragraphs, this was forbidden in previous versions of HTML. A recent article by @feather concludes that the inclusion of block level elements inside a link causes some Assistive Technology (AT) to misbehave.</p>
-                        </a>
-                    </article>
-                    <article>
-                        <a href="#detail">
-                        <h1>Out Of The Blue</h1>
-                    
-                        <img src="https://i.pinimg.com/564x/ab/76/de/ab76decb37b19d3bd4e552d076a3a04e.jpg" alt="A colorful crayon drawing on the hood of a car." />
-                    
-                        <p>It is conforming in HTML5 for links to include block level elements such as headings and paragraphs, this was forbidden in previous versions of HTML. A recent article by @feather concludes that the inclusion of block level elements inside a link causes some Assistive Technology (AT) to misbehave.</p>
-                        </a>
-                    </article>
-                     <article>
-                        <a href="#detail">
-                        <h1>Luan</h1>
-                    
-                        <img src="https://i.pinimg.com/564x/ae/79/9b/ae799b0e7d8833dbcc45773cd4aab27e.jpg" alt="A colorful crayon drawing on the hood of a car." />
-                    
-                        <p>It is conforming in HTML5 for links to include block level elements such as headings and paragraphs, this was forbidden in previous versions of HTML. A recent article by @feather concludes that the inclusion of block level elements inside a link causes some Assistive Technology (AT) to misbehave.</p>
-                        </a>
-                    </article>
-                    <article>
-                        <a href="#detail">
-                        <h1>Flag</h1>
-                    
-                        <img src="https://img.discogs.com/5AslpbRNxmCl7XKWNk4T6ysk5ac=/fit-in/600x581/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-162808-1219181580.jpeg.jpg" alt="A colorful crayon drawing on the hood of a car." />
-                    
-                        <p>It is conforming in HTML5 for links to include block level elements such as headings and paragraphs, this was forbidden in previous versions of HTML. A recent article by @feather concludes that the inclusion of block level elements inside a link causes some Assistive Technology (AT) to misbehave.</p>
-                        </a>
-                    </article>
-                    <article>
-                        <a href="#detail">
-                        <h1>Purple Rain</h1>
-                    
-                        <img src="https://i.pinimg.com/564x/82/00/81/82008194b14544e1a83878f769f93132.jpg" alt="A colorful crayon drawing on the hood of a car." />
-                    
-                        <p>It is conforming in HTML5 for links to include block level elements such as headings and paragraphs, this was forbidden in previous versions of HTML. A recent article by @feather concludes that the inclusion of block level elements inside a link causes some Assistive Technology (AT) to misbehave.</p>
-                        </a>
-                    </article>
-                     <article>
-                        <a href="#detail">
-                        <h1>M&J</h1>
-                    
-                        <img src="https://i.pinimg.com/564x/44/2a/78/442a784a36cff2def4e6d688c677816d.jpg" alt="A colorful crayon drawing on the hood of a car." />
-                    
-                        <p>It is conforming in HTML5 for links to include block level elements such as headings and paragraphs, this was forbidden in previous versions of HTML. A recent article by @feather concludes that the inclusion of block level elements inside a link causes some Assistive Technology (AT) to misbehave.</p>
-                        </a>
-                    </article>
+                    <a href="#article2">
+                    <h1>Tango In The Night</h1>
+                
+                    <img src="https://i.pinimg.com/564x/ad/81/34/ad8134f2d6257937be72764316d36f39.jpg" alt="Coverphoto of the album" />
+                
+                    <p>Tell me lies, tell me sweet little lies.</p>
+                    </a>
+                </article> 
+                <article id="article2">
+                    	<a href="#">✖</a>
+                        <figure>
+                            <!-- Portrait -->
+                            <img src="https://i.pinimg.com/564x/ad/81/34/ad8134f2d6257937be72764316d36f39.jpg" alt="Coverphoto of the album" />
+                            
+                            <!-- Landscape -->
+                            <!-- <img src="https://vasilis.nl/voto/fotos/klein/161001174911-verhuizen-1280.jpg" alt="A bulldozer transporting a beach house along a sunny beach" /> -->
+                            <figcaption>
+                                <h1>This picture has a title</h1>
+                                <p>
+                                    There's also this big and in depth description of the picture. You often see this on newssites or photo blogs. You could also replace the photo with a video if needed.
+                                </p>
+                                <footer>
+                                    <time datetime="2017-02-06">6-2-2017</time> © 2017 <a href="https://vasilis.nl">Vasilis van Gemert</a>
+                                </footer>
+                            </figcaption>
+                            <fieldset>
+                                    <legend>Is this the bees knees?</legend>
+                
+                                    <input type="radio" name="rating" id="rating-0">
+                                    <label for="rating-0">
+                                        Sad!
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
+                                            <circle cx="32" cy="32" r="30" fill="#ef5350" />
+                                            <path d="m41 49.7c-5.8-4.8-12.2-4.8-18 0-.7.6-1.3-.4-.8-1.3 1.8-3.4 5.3-6.5 9.8-6.5s8.1 3.1 9.8 6.5c.5.8-.1 1.8-.8 1.3" fill="#302424"
+                                            />
+                                            <path d="m10.2 24.9c-1.5 4.7.6 10 5.3 12.1 4.6 2.2 10 .5 12.7-3.7l-6.9-7.7-11.1-.7" fill="#fff" />
+                                            <g fill="#302424">
+                                                <path d="m14.2 25.8c-1.4 2.9-.1 6.4 2.8 7.7 2.9 1.4 6.4.1 7.7-2.8 1-1.9-9.6-6.8-10.5-4.9" />
+                                                <path d="m10.2 24.9c1.6-1 3.5-1.5 5.4-1.5 1.9 0 3.8.5 5.6 1.3 1.7.8 3.3 2 4.6 3.4 1.2 1.5 2.2 3.2 2.4 5.1-1.3-1.3-2.6-2.4-4-3.4-1.4-1-2.8-1.8-4.2-2.4-1.5-.7-3-1.2-4.6-1.7-1.8-.3-3.4-.6-5.2-.8"
+                                                />
+                                            </g>
+                                            <path d="m53.8 24.9c1.5 4.7-.6 10-5.3 12.1-4.6 2.2-10 .5-12.7-3.7l6.9-7.7 11.1-.7" fill="#fff" />
+                                            <g fill="#302424">
+                                                <path d="m49.8 25.8c1.4 2.9.1 6.4-2.8 7.7-2.9 1.4-6.4.1-7.7-2.8-1-1.9 9.6-6.8 10.5-4.9" />
+                                                <path d="m53.8 24.9c-1.6-1-3.5-1.5-5.4-1.5-1.9 0-3.8.5-5.6 1.3-1.7.8-3.3 2-4.6 3.4-1.2 1.5-2.2 3.2-2.4 5.1 1.3-1.3 2.6-2.4 4-3.4 1.4-1 2.8-1.8 4.2-2.4 1.5-.7 3-1.2 4.6-1.7 1.8-.3 3.4-.6 5.2-.8"
+                                                />
+                                            </g>
+                                        </svg>
+                                    </label>
+                
+                                    <input type="radio" name="rating" id="rating-1">
+                                    <label for="rating-1">
+                                        Meh
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
+                                            <path d="m2.5 37.2c2.9 16.3 18.4 27.2 34.8 24.3 16.3-2.9 27.2-18.4 24.3-34.8-2.9-16.2-18.5-27.1-34.8-24.2-16.3 2.8-27.2 18.4-24.3 34.7"
+                                             fill="#ffdd67" />
+                                            <g fill="#664e27">
+                                                <circle cx="42.4" cy="24.7" r="5" />
+                                                <circle cx="19.7" cy="28.7" r="5" />
+                                                <path d="m43.3 41.8c-5.8-1.5-12-.4-16.9 3-1.2.9 1.1 4 2.3 3.2 3.2-2.3 8.4-3.8 13.7-2.4 1.3.3 2.4-3.3.9-3.8" />
+                                            </g>
+                                        </svg>
+                                    </label>
+                
+                                    <input type="radio" name="rating" id="rating-2">
+                                    <label for="rating-2">
+                                        Nice
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
+                                            <circle cx="32" cy="32" r="30" fill="#ffdd67" />
+                                            <g fill="#664e27">
+                                                <circle cx="20.5" cy="26.6" r="5" />
+                                                <circle cx="43.5" cy="26.6" r="5" />
+                                                <path d="m44.6 40.3c-8.1 5.7-17.1 5.6-25.2 0-1-.7-1.8.5-1.2 1.6 2.5 4 7.4 7.7 13.8 7.7s11.3-3.6 13.8-7.7c.6-1.1-.2-2.3-1.2-1.6"
+                                                />
+                                            </g>
+                                        </svg>
+                                    </label>
+                
+                                    <input type="radio" name="rating" id="rating-3">
+                                    <label for="rating-3">
+                                        Fantastic!
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
+                                            <circle cx="32" cy="32" r="30" fill="#ffdd67" />
+                                            <path d="m49.7 34.4c-.4-.5-1.1-.4-1.9-.4-15.8 0-15.8 0-31.6 0-.8 0-1.5-.1-1.9.4-3.9 5 .7 19.6 17.7 19.6 17 0 21.6-14.6 17.7-19.6"
+                                             fill="#664e27" />
+                                            <path d="m33.8 41.7c-.6 0-1.5.5-1.1 2 .2.7 1.2 1.6 1.2 2.8 0 2.4-3.8 2.4-3.8 0 0-1.2 1-2 1.2-2.8.3-1.4-.6-2-1.1-2-1.6 0-4.1 1.7-4.1 4.6 0 3.2 2.7 5.8 6 5.8 3.3 0 6-2.6 6-5.8-.1-2.8-2.7-4.5-4.3-4.6"
+                                             fill="#4c3526" />
+                                            <path d="m24.3 50.7c2.2 1 4.8 1.5 7.7 1.5 2.9 0 5.5-.6 7.7-1.5-2.1-1.1-4.7-1.7-7.7-1.7s-5.6.6-7.7 1.7" fill="#ff717f" />
+                                            <path d="m47 36c-15 0-15 0-29.9 0-2.1 0-2.1 4-.1 4 10.4 0 19.6 0 30 0 2 0 2-4 0-4" fill="#fff" />
+                                            <g fill="#664e27">
+                                                <circle cx="20.5" cy="23" r="5" />
+                                                <circle cx="43.5" cy="23" r="5" />
+                                            </g>
+                                        </svg>
+                                    </label>
+                                </fieldset>
+                        </figure>
+                </article>       
+                <article>
+                    <a href="#article3">
+                    <h1>Below The Waste</h1>
+                
+                    <img src="https://vignette.wikia.nocookie.net/lyricwiki/images/c/c6/Art_Of_Noise_-_Below_The_Waste.jpg/revision/latest?cb=20130324095217" alt="Coverphoto of the album" />
+                
+                    <p>Are you afraid of the art of noise?</p>
+                    </a>
+                </article>
+                <article id="article3">
+                    	<a href="#">✖</a>
+                        <figure>
+                            <!-- Portrait -->
+                            <img src="https://vignette.wikia.nocookie.net/lyricwiki/images/c/c6/Art_Of_Noise_-_Below_The_Waste.jpg/revision/latest?cb=20130324095217" alt="Coverphoto of the album" />
+                            
+                            <!-- Landscape -->
+                            <!-- <img src="https://vasilis.nl/voto/fotos/klein/161001174911-verhuizen-1280.jpg" alt="A bulldozer transporting a beach house along a sunny beach" /> -->
+                            <figcaption>
+                                <h1>This picture has a title</h1>
+                                <p>
+                                    There's also this big and in depth description of the picture. You often see this on newssites or photo blogs. You could also replace the photo with a video if needed.
+                                </p>
+                                <footer>
+                                    <time datetime="2017-02-06">6-2-2017</time> © 2017 <a href="https://vasilis.nl">Vasilis van Gemert</a>
+                                </footer>
+                            </figcaption>
+                            <fieldset>
+                                    <legend>Is this the bees knees?</legend>
+                
+                                    <input type="radio" name="rating" id="rating-0">
+                                    <label for="rating-0">
+                                        Sad!
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
+                                            <circle cx="32" cy="32" r="30" fill="#ef5350" />
+                                            <path d="m41 49.7c-5.8-4.8-12.2-4.8-18 0-.7.6-1.3-.4-.8-1.3 1.8-3.4 5.3-6.5 9.8-6.5s8.1 3.1 9.8 6.5c.5.8-.1 1.8-.8 1.3" fill="#302424"
+                                            />
+                                            <path d="m10.2 24.9c-1.5 4.7.6 10 5.3 12.1 4.6 2.2 10 .5 12.7-3.7l-6.9-7.7-11.1-.7" fill="#fff" />
+                                            <g fill="#302424">
+                                                <path d="m14.2 25.8c-1.4 2.9-.1 6.4 2.8 7.7 2.9 1.4 6.4.1 7.7-2.8 1-1.9-9.6-6.8-10.5-4.9" />
+                                                <path d="m10.2 24.9c1.6-1 3.5-1.5 5.4-1.5 1.9 0 3.8.5 5.6 1.3 1.7.8 3.3 2 4.6 3.4 1.2 1.5 2.2 3.2 2.4 5.1-1.3-1.3-2.6-2.4-4-3.4-1.4-1-2.8-1.8-4.2-2.4-1.5-.7-3-1.2-4.6-1.7-1.8-.3-3.4-.6-5.2-.8"
+                                                />
+                                            </g>
+                                            <path d="m53.8 24.9c1.5 4.7-.6 10-5.3 12.1-4.6 2.2-10 .5-12.7-3.7l6.9-7.7 11.1-.7" fill="#fff" />
+                                            <g fill="#302424">
+                                                <path d="m49.8 25.8c1.4 2.9.1 6.4-2.8 7.7-2.9 1.4-6.4.1-7.7-2.8-1-1.9 9.6-6.8 10.5-4.9" />
+                                                <path d="m53.8 24.9c-1.6-1-3.5-1.5-5.4-1.5-1.9 0-3.8.5-5.6 1.3-1.7.8-3.3 2-4.6 3.4-1.2 1.5-2.2 3.2-2.4 5.1 1.3-1.3 2.6-2.4 4-3.4 1.4-1 2.8-1.8 4.2-2.4 1.5-.7 3-1.2 4.6-1.7 1.8-.3 3.4-.6 5.2-.8"
+                                                />
+                                            </g>
+                                        </svg>
+                                    </label>
+                
+                                    <input type="radio" name="rating" id="rating-1">
+                                    <label for="rating-1">
+                                        Meh
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
+                                            <path d="m2.5 37.2c2.9 16.3 18.4 27.2 34.8 24.3 16.3-2.9 27.2-18.4 24.3-34.8-2.9-16.2-18.5-27.1-34.8-24.2-16.3 2.8-27.2 18.4-24.3 34.7"
+                                             fill="#ffdd67" />
+                                            <g fill="#664e27">
+                                                <circle cx="42.4" cy="24.7" r="5" />
+                                                <circle cx="19.7" cy="28.7" r="5" />
+                                                <path d="m43.3 41.8c-5.8-1.5-12-.4-16.9 3-1.2.9 1.1 4 2.3 3.2 3.2-2.3 8.4-3.8 13.7-2.4 1.3.3 2.4-3.3.9-3.8" />
+                                            </g>
+                                        </svg>
+                                    </label>
+                
+                                    <input type="radio" name="rating" id="rating-2">
+                                    <label for="rating-2">
+                                        Nice
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
+                                            <circle cx="32" cy="32" r="30" fill="#ffdd67" />
+                                            <g fill="#664e27">
+                                                <circle cx="20.5" cy="26.6" r="5" />
+                                                <circle cx="43.5" cy="26.6" r="5" />
+                                                <path d="m44.6 40.3c-8.1 5.7-17.1 5.6-25.2 0-1-.7-1.8.5-1.2 1.6 2.5 4 7.4 7.7 13.8 7.7s11.3-3.6 13.8-7.7c.6-1.1-.2-2.3-1.2-1.6"
+                                                />
+                                            </g>
+                                        </svg>
+                                    </label>
+                
+                                    <input type="radio" name="rating" id="rating-3">
+                                    <label for="rating-3">
+                                        Fantastic!
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
+                                            <circle cx="32" cy="32" r="30" fill="#ffdd67" />
+                                            <path d="m49.7 34.4c-.4-.5-1.1-.4-1.9-.4-15.8 0-15.8 0-31.6 0-.8 0-1.5-.1-1.9.4-3.9 5 .7 19.6 17.7 19.6 17 0 21.6-14.6 17.7-19.6"
+                                             fill="#664e27" />
+                                            <path d="m33.8 41.7c-.6 0-1.5.5-1.1 2 .2.7 1.2 1.6 1.2 2.8 0 2.4-3.8 2.4-3.8 0 0-1.2 1-2 1.2-2.8.3-1.4-.6-2-1.1-2-1.6 0-4.1 1.7-4.1 4.6 0 3.2 2.7 5.8 6 5.8 3.3 0 6-2.6 6-5.8-.1-2.8-2.7-4.5-4.3-4.6"
+                                             fill="#4c3526" />
+                                            <path d="m24.3 50.7c2.2 1 4.8 1.5 7.7 1.5 2.9 0 5.5-.6 7.7-1.5-2.1-1.1-4.7-1.7-7.7-1.7s-5.6.6-7.7 1.7" fill="#ff717f" />
+                                            <path d="m47 36c-15 0-15 0-29.9 0-2.1 0-2.1 4-.1 4 10.4 0 19.6 0 30 0 2 0 2-4 0-4" fill="#fff" />
+                                            <g fill="#664e27">
+                                                <circle cx="20.5" cy="23" r="5" />
+                                                <circle cx="43.5" cy="23" r="5" />
+                                            </g>
+                                        </svg>
+                                    </label>
+                                </fieldset>
+                        </figure>
+                </article>
+                <article>
+                    <a href="#article4">
+                    <h1>Flag</h1>
+                
+                    <img src="https://img.discogs.com/5AslpbRNxmCl7XKWNk4T6ysk5ac=/fit-in/600x581/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-162808-1219181580.jpeg.jpg" alt="A colorful crayon drawing on the hood of a car." />
+                
+                    <p>Clouds. Love. Stars. Colors. Take it into the night.</p>
+                    </a>
+                </article>
+                <article id="article4">
+                    	<a href="#">✖</a>
+                        <figure>
+                            <!-- Portrait -->
+                            <img src="https://img.discogs.com/5AslpbRNxmCl7XKWNk4T6ysk5ac=/fit-in/600x581/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-162808-1219181580.jpeg.jpg" alt="Coverphoto of the album" />
+                            
+                            <!-- Landscape -->
+                            <!-- <img src="https://vasilis.nl/voto/fotos/klein/161001174911-verhuizen-1280.jpg" alt="A bulldozer transporting a beach house along a sunny beach" /> -->
+                            <figcaption>
+                                <h1>This picture has a title</h1>
+                                <p>
+                                    There's also this big and in depth description of the picture. You often see this on newssites or photo blogs. You could also replace the photo with a video if needed.
+                                </p>
+                                <footer>
+                                    <time datetime="2017-02-06">6-2-2017</time> © 2017 <a href="https://vasilis.nl">Vasilis van Gemert</a>
+                                </footer>
+                            </figcaption>
+                            <fieldset>
+                                    <legend>Is this the bees knees?</legend>
+                
+                                    <input type="radio" name="rating" id="rating-0">
+                                    <label for="rating-0">
+                                        Sad!
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
+                                            <circle cx="32" cy="32" r="30" fill="#ef5350" />
+                                            <path d="m41 49.7c-5.8-4.8-12.2-4.8-18 0-.7.6-1.3-.4-.8-1.3 1.8-3.4 5.3-6.5 9.8-6.5s8.1 3.1 9.8 6.5c.5.8-.1 1.8-.8 1.3" fill="#302424"
+                                            />
+                                            <path d="m10.2 24.9c-1.5 4.7.6 10 5.3 12.1 4.6 2.2 10 .5 12.7-3.7l-6.9-7.7-11.1-.7" fill="#fff" />
+                                            <g fill="#302424">
+                                                <path d="m14.2 25.8c-1.4 2.9-.1 6.4 2.8 7.7 2.9 1.4 6.4.1 7.7-2.8 1-1.9-9.6-6.8-10.5-4.9" />
+                                                <path d="m10.2 24.9c1.6-1 3.5-1.5 5.4-1.5 1.9 0 3.8.5 5.6 1.3 1.7.8 3.3 2 4.6 3.4 1.2 1.5 2.2 3.2 2.4 5.1-1.3-1.3-2.6-2.4-4-3.4-1.4-1-2.8-1.8-4.2-2.4-1.5-.7-3-1.2-4.6-1.7-1.8-.3-3.4-.6-5.2-.8"
+                                                />
+                                            </g>
+                                            <path d="m53.8 24.9c1.5 4.7-.6 10-5.3 12.1-4.6 2.2-10 .5-12.7-3.7l6.9-7.7 11.1-.7" fill="#fff" />
+                                            <g fill="#302424">
+                                                <path d="m49.8 25.8c1.4 2.9.1 6.4-2.8 7.7-2.9 1.4-6.4.1-7.7-2.8-1-1.9 9.6-6.8 10.5-4.9" />
+                                                <path d="m53.8 24.9c-1.6-1-3.5-1.5-5.4-1.5-1.9 0-3.8.5-5.6 1.3-1.7.8-3.3 2-4.6 3.4-1.2 1.5-2.2 3.2-2.4 5.1 1.3-1.3 2.6-2.4 4-3.4 1.4-1 2.8-1.8 4.2-2.4 1.5-.7 3-1.2 4.6-1.7 1.8-.3 3.4-.6 5.2-.8"
+                                                />
+                                            </g>
+                                        </svg>
+                                    </label>
+                
+                                    <input type="radio" name="rating" id="rating-1">
+                                    <label for="rating-1">
+                                        Meh
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
+                                            <path d="m2.5 37.2c2.9 16.3 18.4 27.2 34.8 24.3 16.3-2.9 27.2-18.4 24.3-34.8-2.9-16.2-18.5-27.1-34.8-24.2-16.3 2.8-27.2 18.4-24.3 34.7"
+                                             fill="#ffdd67" />
+                                            <g fill="#664e27">
+                                                <circle cx="42.4" cy="24.7" r="5" />
+                                                <circle cx="19.7" cy="28.7" r="5" />
+                                                <path d="m43.3 41.8c-5.8-1.5-12-.4-16.9 3-1.2.9 1.1 4 2.3 3.2 3.2-2.3 8.4-3.8 13.7-2.4 1.3.3 2.4-3.3.9-3.8" />
+                                            </g>
+                                        </svg>
+                                    </label>
+                
+                                    <input type="radio" name="rating" id="rating-2">
+                                    <label for="rating-2">
+                                        Nice
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
+                                            <circle cx="32" cy="32" r="30" fill="#ffdd67" />
+                                            <g fill="#664e27">
+                                                <circle cx="20.5" cy="26.6" r="5" />
+                                                <circle cx="43.5" cy="26.6" r="5" />
+                                                <path d="m44.6 40.3c-8.1 5.7-17.1 5.6-25.2 0-1-.7-1.8.5-1.2 1.6 2.5 4 7.4 7.7 13.8 7.7s11.3-3.6 13.8-7.7c.6-1.1-.2-2.3-1.2-1.6"
+                                                />
+                                            </g>
+                                        </svg>
+                                    </label>
+                
+                                    <input type="radio" name="rating" id="rating-3">
+                                    <label for="rating-3">
+                                        Fantastic!
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
+                                            <circle cx="32" cy="32" r="30" fill="#ffdd67" />
+                                            <path d="m49.7 34.4c-.4-.5-1.1-.4-1.9-.4-15.8 0-15.8 0-31.6 0-.8 0-1.5-.1-1.9.4-3.9 5 .7 19.6 17.7 19.6 17 0 21.6-14.6 17.7-19.6"
+                                             fill="#664e27" />
+                                            <path d="m33.8 41.7c-.6 0-1.5.5-1.1 2 .2.7 1.2 1.6 1.2 2.8 0 2.4-3.8 2.4-3.8 0 0-1.2 1-2 1.2-2.8.3-1.4-.6-2-1.1-2-1.6 0-4.1 1.7-4.1 4.6 0 3.2 2.7 5.8 6 5.8 3.3 0 6-2.6 6-5.8-.1-2.8-2.7-4.5-4.3-4.6"
+                                             fill="#4c3526" />
+                                            <path d="m24.3 50.7c2.2 1 4.8 1.5 7.7 1.5 2.9 0 5.5-.6 7.7-1.5-2.1-1.1-4.7-1.7-7.7-1.7s-5.6.6-7.7 1.7" fill="#ff717f" />
+                                            <path d="m47 36c-15 0-15 0-29.9 0-2.1 0-2.1 4-.1 4 10.4 0 19.6 0 30 0 2 0 2-4 0-4" fill="#fff" />
+                                            <g fill="#664e27">
+                                                <circle cx="20.5" cy="23" r="5" />
+                                                <circle cx="43.5" cy="23" r="5" />
+                                            </g>
+                                        </svg>
+                                    </label>
+                                </fieldset>
+                        </figure>
+                </article>
+                <article>
+                    <a href="#article5">
+                    <h1>Purple Rain</h1>
+                
+                    <img src="https://i.pinimg.com/564x/82/00/81/82008194b14544e1a83878f769f93132.jpg" alt="Coverphoto of the album" />
+                
+                    <p>Only wanna see you dancing in the purple rain.</p>
+                    </a>
+                </article>
+                <article id="article5">
+                    	<a href="#">✖</a>
+                        <figure>
+                            <!-- Portrait -->
+                            <img src="https://i.pinimg.com/564x/82/00/81/82008194b14544e1a83878f769f93132.jpg" alt="Coverphoto of the album" />
+                            
+                            <!-- Landscape -->
+                            <!-- <img src="https://vasilis.nl/voto/fotos/klein/161001174911-verhuizen-1280.jpg" alt="A bulldozer transporting a beach house along a sunny beach" /> -->
+                            <figcaption>
+                                <h1>This picture has a title</h1>
+                                <p>
+                                    There's also this big and in depth description of the picture. You often see this on newssites or photo blogs. You could also replace the photo with a video if needed.
+                                </p>
+                                <footer>
+                                    <time datetime="2017-02-06">6-2-2017</time> © 2017 <a href="https://vasilis.nl">Vasilis van Gemert</a>
+                                </footer>
+                            </figcaption>
+                            <fieldset>
+                                    <legend>Is this the bees knees?</legend>
+                
+                                    <input type="radio" name="rating" id="rating-0">
+                                    <label for="rating-0">
+                                        Sad!
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
+                                            <circle cx="32" cy="32" r="30" fill="#ef5350" />
+                                            <path d="m41 49.7c-5.8-4.8-12.2-4.8-18 0-.7.6-1.3-.4-.8-1.3 1.8-3.4 5.3-6.5 9.8-6.5s8.1 3.1 9.8 6.5c.5.8-.1 1.8-.8 1.3" fill="#302424"
+                                            />
+                                            <path d="m10.2 24.9c-1.5 4.7.6 10 5.3 12.1 4.6 2.2 10 .5 12.7-3.7l-6.9-7.7-11.1-.7" fill="#fff" />
+                                            <g fill="#302424">
+                                                <path d="m14.2 25.8c-1.4 2.9-.1 6.4 2.8 7.7 2.9 1.4 6.4.1 7.7-2.8 1-1.9-9.6-6.8-10.5-4.9" />
+                                                <path d="m10.2 24.9c1.6-1 3.5-1.5 5.4-1.5 1.9 0 3.8.5 5.6 1.3 1.7.8 3.3 2 4.6 3.4 1.2 1.5 2.2 3.2 2.4 5.1-1.3-1.3-2.6-2.4-4-3.4-1.4-1-2.8-1.8-4.2-2.4-1.5-.7-3-1.2-4.6-1.7-1.8-.3-3.4-.6-5.2-.8"
+                                                />
+                                            </g>
+                                            <path d="m53.8 24.9c1.5 4.7-.6 10-5.3 12.1-4.6 2.2-10 .5-12.7-3.7l6.9-7.7 11.1-.7" fill="#fff" />
+                                            <g fill="#302424">
+                                                <path d="m49.8 25.8c1.4 2.9.1 6.4-2.8 7.7-2.9 1.4-6.4.1-7.7-2.8-1-1.9 9.6-6.8 10.5-4.9" />
+                                                <path d="m53.8 24.9c-1.6-1-3.5-1.5-5.4-1.5-1.9 0-3.8.5-5.6 1.3-1.7.8-3.3 2-4.6 3.4-1.2 1.5-2.2 3.2-2.4 5.1 1.3-1.3 2.6-2.4 4-3.4 1.4-1 2.8-1.8 4.2-2.4 1.5-.7 3-1.2 4.6-1.7 1.8-.3 3.4-.6 5.2-.8"
+                                                />
+                                            </g>
+                                        </svg>
+                                    </label>
+                
+                                    <input type="radio" name="rating" id="rating-1">
+                                    <label for="rating-1">
+                                        Meh
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
+                                            <path d="m2.5 37.2c2.9 16.3 18.4 27.2 34.8 24.3 16.3-2.9 27.2-18.4 24.3-34.8-2.9-16.2-18.5-27.1-34.8-24.2-16.3 2.8-27.2 18.4-24.3 34.7"
+                                             fill="#ffdd67" />
+                                            <g fill="#664e27">
+                                                <circle cx="42.4" cy="24.7" r="5" />
+                                                <circle cx="19.7" cy="28.7" r="5" />
+                                                <path d="m43.3 41.8c-5.8-1.5-12-.4-16.9 3-1.2.9 1.1 4 2.3 3.2 3.2-2.3 8.4-3.8 13.7-2.4 1.3.3 2.4-3.3.9-3.8" />
+                                            </g>
+                                        </svg>
+                                    </label>
+                
+                                    <input type="radio" name="rating" id="rating-2">
+                                    <label for="rating-2">
+                                        Nice
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
+                                            <circle cx="32" cy="32" r="30" fill="#ffdd67" />
+                                            <g fill="#664e27">
+                                                <circle cx="20.5" cy="26.6" r="5" />
+                                                <circle cx="43.5" cy="26.6" r="5" />
+                                                <path d="m44.6 40.3c-8.1 5.7-17.1 5.6-25.2 0-1-.7-1.8.5-1.2 1.6 2.5 4 7.4 7.7 13.8 7.7s11.3-3.6 13.8-7.7c.6-1.1-.2-2.3-1.2-1.6"
+                                                />
+                                            </g>
+                                        </svg>
+                                    </label>
+                
+                                    <input type="radio" name="rating" id="rating-3">
+                                    <label for="rating-3">
+                                        Fantastic!
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
+                                            <circle cx="32" cy="32" r="30" fill="#ffdd67" />
+                                            <path d="m49.7 34.4c-.4-.5-1.1-.4-1.9-.4-15.8 0-15.8 0-31.6 0-.8 0-1.5-.1-1.9.4-3.9 5 .7 19.6 17.7 19.6 17 0 21.6-14.6 17.7-19.6"
+                                             fill="#664e27" />
+                                            <path d="m33.8 41.7c-.6 0-1.5.5-1.1 2 .2.7 1.2 1.6 1.2 2.8 0 2.4-3.8 2.4-3.8 0 0-1.2 1-2 1.2-2.8.3-1.4-.6-2-1.1-2-1.6 0-4.1 1.7-4.1 4.6 0 3.2 2.7 5.8 6 5.8 3.3 0 6-2.6 6-5.8-.1-2.8-2.7-4.5-4.3-4.6"
+                                             fill="#4c3526" />
+                                            <path d="m24.3 50.7c2.2 1 4.8 1.5 7.7 1.5 2.9 0 5.5-.6 7.7-1.5-2.1-1.1-4.7-1.7-7.7-1.7s-5.6.6-7.7 1.7" fill="#ff717f" />
+                                            <path d="m47 36c-15 0-15 0-29.9 0-2.1 0-2.1 4-.1 4 10.4 0 19.6 0 30 0 2 0 2-4 0-4" fill="#fff" />
+                                            <g fill="#664e27">
+                                                <circle cx="20.5" cy="23" r="5" />
+                                                <circle cx="43.5" cy="23" r="5" />
+                                            </g>
+                                        </svg>
+                                    </label>
+                                </fieldset>
+                        </figure>
+                </article>
+                <article>
+                    <a href="#article6">
+                    <h1>M&J</h1>
+                
+                    <img src="https://i.pinimg.com/564x/44/2a/78/442a784a36cff2def4e6d688c677816d.jpg" alt="Coverphoto of the album" />
+                
+                    <p>C'est l'histoire d'une étoile et d'un lion</p>
+                    </a>
+                </article>
+                <article id="article6">
+                    	<a href="#">✖</a>
+                        <figure>
+                            <!-- Portrait -->
+                            <img src="https://i.pinimg.com/564x/44/2a/78/442a784a36cff2def4e6d688c677816d.jpg" alt="Coverphoto of the album" />
+                            
+                            <!-- Landscape -->
+                            <!-- <img src="https://vasilis.nl/voto/fotos/klein/161001174911-verhuizen-1280.jpg" alt="A bulldozer transporting a beach house along a sunny beach" /> -->
+                            <figcaption>
+                                <h1>This picture has a title</h1>
+                                <p>
+                                    There's also this big and in depth description of the picture. You often see this on newssites or photo blogs. You could also replace the photo with a video if needed.
+                                </p>
+                                <footer>
+                                    <time datetime="2017-02-06">6-2-2017</time> © 2017 <a href="https://vasilis.nl">Vasilis van Gemert</a>
+                                </footer>
+                            </figcaption>
+                            <fieldset>
+                                    <legend>Is this the bees knees?</legend>
+                
+                                    <input type="radio" name="rating" id="rating-0">
+                                    <label for="rating-0">
+                                        Sad!
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
+                                            <circle cx="32" cy="32" r="30" fill="#ef5350" />
+                                            <path d="m41 49.7c-5.8-4.8-12.2-4.8-18 0-.7.6-1.3-.4-.8-1.3 1.8-3.4 5.3-6.5 9.8-6.5s8.1 3.1 9.8 6.5c.5.8-.1 1.8-.8 1.3" fill="#302424"
+                                            />
+                                            <path d="m10.2 24.9c-1.5 4.7.6 10 5.3 12.1 4.6 2.2 10 .5 12.7-3.7l-6.9-7.7-11.1-.7" fill="#fff" />
+                                            <g fill="#302424">
+                                                <path d="m14.2 25.8c-1.4 2.9-.1 6.4 2.8 7.7 2.9 1.4 6.4.1 7.7-2.8 1-1.9-9.6-6.8-10.5-4.9" />
+                                                <path d="m10.2 24.9c1.6-1 3.5-1.5 5.4-1.5 1.9 0 3.8.5 5.6 1.3 1.7.8 3.3 2 4.6 3.4 1.2 1.5 2.2 3.2 2.4 5.1-1.3-1.3-2.6-2.4-4-3.4-1.4-1-2.8-1.8-4.2-2.4-1.5-.7-3-1.2-4.6-1.7-1.8-.3-3.4-.6-5.2-.8"
+                                                />
+                                            </g>
+                                            <path d="m53.8 24.9c1.5 4.7-.6 10-5.3 12.1-4.6 2.2-10 .5-12.7-3.7l6.9-7.7 11.1-.7" fill="#fff" />
+                                            <g fill="#302424">
+                                                <path d="m49.8 25.8c1.4 2.9.1 6.4-2.8 7.7-2.9 1.4-6.4.1-7.7-2.8-1-1.9 9.6-6.8 10.5-4.9" />
+                                                <path d="m53.8 24.9c-1.6-1-3.5-1.5-5.4-1.5-1.9 0-3.8.5-5.6 1.3-1.7.8-3.3 2-4.6 3.4-1.2 1.5-2.2 3.2-2.4 5.1 1.3-1.3 2.6-2.4 4-3.4 1.4-1 2.8-1.8 4.2-2.4 1.5-.7 3-1.2 4.6-1.7 1.8-.3 3.4-.6 5.2-.8"
+                                                />
+                                            </g>
+                                        </svg>
+                                    </label>
+                
+                                    <input type="radio" name="rating" id="rating-1">
+                                    <label for="rating-1">
+                                        Meh
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
+                                            <path d="m2.5 37.2c2.9 16.3 18.4 27.2 34.8 24.3 16.3-2.9 27.2-18.4 24.3-34.8-2.9-16.2-18.5-27.1-34.8-24.2-16.3 2.8-27.2 18.4-24.3 34.7"
+                                             fill="#ffdd67" />
+                                            <g fill="#664e27">
+                                                <circle cx="42.4" cy="24.7" r="5" />
+                                                <circle cx="19.7" cy="28.7" r="5" />
+                                                <path d="m43.3 41.8c-5.8-1.5-12-.4-16.9 3-1.2.9 1.1 4 2.3 3.2 3.2-2.3 8.4-3.8 13.7-2.4 1.3.3 2.4-3.3.9-3.8" />
+                                            </g>
+                                        </svg>
+                                    </label>
+                
+                                    <input type="radio" name="rating" id="rating-2">
+                                    <label for="rating-2">
+                                        Nice
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
+                                            <circle cx="32" cy="32" r="30" fill="#ffdd67" />
+                                            <g fill="#664e27">
+                                                <circle cx="20.5" cy="26.6" r="5" />
+                                                <circle cx="43.5" cy="26.6" r="5" />
+                                                <path d="m44.6 40.3c-8.1 5.7-17.1 5.6-25.2 0-1-.7-1.8.5-1.2 1.6 2.5 4 7.4 7.7 13.8 7.7s11.3-3.6 13.8-7.7c.6-1.1-.2-2.3-1.2-1.6"
+                                                />
+                                            </g>
+                                        </svg>
+                                    </label>
+                
+                                    <input type="radio" name="rating" id="rating-3">
+                                    <label for="rating-3">
+                                        Fantastic!
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" enable-background="new 0 0 64 64">
+                                            <circle cx="32" cy="32" r="30" fill="#ffdd67" />
+                                            <path d="m49.7 34.4c-.4-.5-1.1-.4-1.9-.4-15.8 0-15.8 0-31.6 0-.8 0-1.5-.1-1.9.4-3.9 5 .7 19.6 17.7 19.6 17 0 21.6-14.6 17.7-19.6"
+                                             fill="#664e27" />
+                                            <path d="m33.8 41.7c-.6 0-1.5.5-1.1 2 .2.7 1.2 1.6 1.2 2.8 0 2.4-3.8 2.4-3.8 0 0-1.2 1-2 1.2-2.8.3-1.4-.6-2-1.1-2-1.6 0-4.1 1.7-4.1 4.6 0 3.2 2.7 5.8 6 5.8 3.3 0 6-2.6 6-5.8-.1-2.8-2.7-4.5-4.3-4.6"
+                                             fill="#4c3526" />
+                                            <path d="m24.3 50.7c2.2 1 4.8 1.5 7.7 1.5 2.9 0 5.5-.6 7.7-1.5-2.1-1.1-4.7-1.7-7.7-1.7s-5.6.6-7.7 1.7" fill="#ff717f" />
+                                            <path d="m47 36c-15 0-15 0-29.9 0-2.1 0-2.1 4-.1 4 10.4 0 19.6 0 30 0 2 0 2-4 0-4" fill="#fff" />
+                                            <g fill="#664e27">
+                                                <circle cx="20.5" cy="23" r="5" />
+                                                <circle cx="43.5" cy="23" r="5" />
+                                            </g>
+                                        </svg>
+                                    </label>
+                                </fieldset>
+                        </figure>
+                </article>
         </section>
 
         <section>
-            <h1>This section as a title aswell :D</h1>
-            <article>
-                <h1>This picture has a title</h1>
-                <figure>
-                    <!-- Portrait -->
-                    <img src="https://vasilis.nl/voto/fotos/klein/170126170241-we-hebben-een-bortusk-1280.jpg" alt="A drawing of a colorful monster on a newspaper" />
-                    
-                    <!-- Landscape -->
-                    <!-- <img src="https://vasilis.nl/voto/fotos/klein/161001174911-verhuizen-1280.jpg" alt="A bulldozer transporting a beach house along a sunny beach" /> -->
-                    <figcaption>
-                        <p>
-                            There's also this big and in depth description of the picture. You often see this on newssites or photo blogs. You could also replace the photo with a video if needed.
-                        </p>
-                        <footer>
-                            <time datetime="2017-02-06">6-2-2017</time> © 2017 <a href="https://vasilis.nl">Vasilis van Gemert</a>
-                        </footer>
-                    </figcaption>
-                </figure>
-            </article>
-            <article>
-                    <h1>This picture has a title</h1>
-                    <figure>
-                        <!-- Portrait -->
-                        <img src="https://vasilis.nl/voto/fotos/klein/170126170241-we-hebben-een-bortusk-1280.jpg" alt="A drawing of a colorful monster on a newspaper" />
-                        
-                        <!-- Landscape -->
-                        <!-- <img src="https://vasilis.nl/voto/fotos/klein/161001174911-verhuizen-1280.jpg" alt="A bulldozer transporting a beach house along a sunny beach" /> -->
-                        <figcaption>
-                            <p>
-                                There's also this big and in depth description of the picture. You often see this on newssites or photo blogs. You could also replace the photo with a video if needed.
-                            </p>
-                            <footer>
-                                <time datetime="2017-02-06">6-2-2017</time> © 2017 <a href="https://vasilis.nl">Vasilis van Gemert</a>
-                            </footer>
-                        </figcaption>
-                    </figure>
-                </article>
-                <article>
-                <h1>This picture has a title</h1>
-                <figure>
-                    <!-- Portrait -->
-                    <img src="https://vasilis.nl/voto/fotos/klein/170126170241-we-hebben-een-bortusk-1280.jpg" alt="A drawing of a colorful monster on a newspaper" />
-                    
-                    <!-- Landscape -->
-                    <!-- <img src="https://vasilis.nl/voto/fotos/klein/161001174911-verhuizen-1280.jpg" alt="A bulldozer transporting a beach house along a sunny beach" /> -->
-                    <figcaption>
-                        <p>
-                            There's also this big and in depth description of the picture. You often see this on newssites or photo blogs. You could also replace the photo with a video if needed.
-                        </p>
-                        <footer>
-                            <time datetime="2017-02-06">6-2-2017</time> © 2017 <a href="https://vasilis.nl">Vasilis van Gemert</a>
-                        </footer>
-                    </figcaption>
-                </figure>
-            </article>
-            <article>
-                <h1>This picture has a title</h1>
-                <figure>
-                    <!-- Portrait -->
-                    <img src="https://vasilis.nl/voto/fotos/klein/170126170241-we-hebben-een-bortusk-1280.jpg" alt="A drawing of a colorful monster on a newspaper" />
-                    
-                    <!-- Landscape -->
-                    <!-- <img src="https://vasilis.nl/voto/fotos/klein/161001174911-verhuizen-1280.jpg" alt="A bulldozer transporting a beach house along a sunny beach" /> -->
-                    <figcaption>
-                        <p>
-                            There's also this big and in depth description of the picture. You often see this on newssites or photo blogs. You could also replace the photo with a video if needed.
-                        </p>
-                        <footer>
-                            <time datetime="2017-02-06">6-2-2017</time> © 2017 <a href="https://vasilis.nl">Vasilis van Gemert</a>
-                        </footer>
-                    </figcaption>
-                </figure>
-            </article>
         </section>
-        <section id="chat" tabindex="-1">
+        <section id="chat">
             <h1>Chat with bot</h1>
             <ol>
                 <li>
@@ -255,64 +743,6 @@
             
             </form>
         </section>
-        <aside>
-            <nav>
-                <h1>Finish your order</h1>
-            
-                <progress value="0.25" max="1">25%</progress>
-            
-                <ol>
-                    <li>
-                        <a href="/cart">Cart</a>
-                    </li>
-                    <li>
-                        <a href="#main-content" aria-label="Address, current step">Address</a>
-                    </li>
-                    <li>
-                        Payment
-                    </li>
-                    <li>
-                        Confirm
-                    </li>
-                </ol>
-                <div>
-                    <div role="text">Loading</div>
-                </div>
-            </nav>
-            <fieldset>
-                    <legend>Rating</legend>
-                
-                    
-                    <input type="radio" name="rating" id="rating-0">
-                    <label for="rating-0">
-                        Sad!
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" enable-background="new 0 0 64 64"><circle cx="32" cy="32" r="30" fill="#ef5350"/><path d="m41 49.7c-5.8-4.8-12.2-4.8-18 0-.7.6-1.3-.4-.8-1.3 1.8-3.4 5.3-6.5 9.8-6.5s8.1 3.1 9.8 6.5c.5.8-.1 1.8-.8 1.3" fill="#302424"/><path d="m10.2 24.9c-1.5 4.7.6 10 5.3 12.1 4.6 2.2 10 .5 12.7-3.7l-6.9-7.7-11.1-.7" fill="#fff"/><g fill="#302424"><path d="m14.2 25.8c-1.4 2.9-.1 6.4 2.8 7.7 2.9 1.4 6.4.1 7.7-2.8 1-1.9-9.6-6.8-10.5-4.9"/><path d="m10.2 24.9c1.6-1 3.5-1.5 5.4-1.5 1.9 0 3.8.5 5.6 1.3 1.7.8 3.3 2 4.6 3.4 1.2 1.5 2.2 3.2 2.4 5.1-1.3-1.3-2.6-2.4-4-3.4-1.4-1-2.8-1.8-4.2-2.4-1.5-.7-3-1.2-4.6-1.7-1.8-.3-3.4-.6-5.2-.8"/></g><path d="m53.8 24.9c1.5 4.7-.6 10-5.3 12.1-4.6 2.2-10 .5-12.7-3.7l6.9-7.7 11.1-.7" fill="#fff"/><g fill="#302424"><path d="m49.8 25.8c1.4 2.9.1 6.4-2.8 7.7-2.9 1.4-6.4.1-7.7-2.8-1-1.9 9.6-6.8 10.5-4.9"/><path d="m53.8 24.9c-1.6-1-3.5-1.5-5.4-1.5-1.9 0-3.8.5-5.6 1.3-1.7.8-3.3 2-4.6 3.4-1.2 1.5-2.2 3.2-2.4 5.1 1.3-1.3 2.6-2.4 4-3.4 1.4-1 2.8-1.8 4.2-2.4 1.5-.7 3-1.2 4.6-1.7 1.8-.3 3.4-.6 5.2-.8"/></g></svg>
-                    </label>
-                
-                
-                    <input type="radio" name="rating" id="rating-1">
-                    <label for="rating-1">
-                        Meh
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" enable-background="new 0 0 64 64"><path d="m2.5 37.2c2.9 16.3 18.4 27.2 34.8 24.3 16.3-2.9 27.2-18.4 24.3-34.8-2.9-16.2-18.5-27.1-34.8-24.2-16.3 2.8-27.2 18.4-24.3 34.7" fill="#ffdd67"/><g fill="#664e27"><circle cx="42.4" cy="24.7" r="5"/><circle cx="19.7" cy="28.7" r="5"/><path d="m43.3 41.8c-5.8-1.5-12-.4-16.9 3-1.2.9 1.1 4 2.3 3.2 3.2-2.3 8.4-3.8 13.7-2.4 1.3.3 2.4-3.3.9-3.8"/></g></svg>
-                    </label>
-                
-                
-                    <input type="radio" name="rating" id="rating-2">
-                    <label for="rating-2">
-                        Nice
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" enable-background="new 0 0 64 64"><circle cx="32" cy="32" r="30" fill="#ffdd67"/><g fill="#664e27"><circle cx="20.5" cy="26.6" r="5"/><circle cx="43.5" cy="26.6" r="5"/><path d="m44.6 40.3c-8.1 5.7-17.1 5.6-25.2 0-1-.7-1.8.5-1.2 1.6 2.5 4 7.4 7.7 13.8 7.7s11.3-3.6 13.8-7.7c.6-1.1-.2-2.3-1.2-1.6"/></g></svg>
-                    </label>
-                
-                
-                    <input type="radio" name="rating" id="rating-3">
-                    <label for="rating-3">
-                        Fantastic!
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" enable-background="new 0 0 64 64"><circle cx="32" cy="32" r="30" fill="#ffdd67"/><path d="m49.7 34.4c-.4-.5-1.1-.4-1.9-.4-15.8 0-15.8 0-31.6 0-.8 0-1.5-.1-1.9.4-3.9 5 .7 19.6 17.7 19.6 17 0 21.6-14.6 17.7-19.6" fill="#664e27"/><path d="m33.8 41.7c-.6 0-1.5.5-1.1 2 .2.7 1.2 1.6 1.2 2.8 0 2.4-3.8 2.4-3.8 0 0-1.2 1-2 1.2-2.8.3-1.4-.6-2-1.1-2-1.6 0-4.1 1.7-4.1 4.6 0 3.2 2.7 5.8 6 5.8 3.3 0 6-2.6 6-5.8-.1-2.8-2.7-4.5-4.3-4.6" fill="#4c3526"/><path d="m24.3 50.7c2.2 1 4.8 1.5 7.7 1.5 2.9 0 5.5-.6 7.7-1.5-2.1-1.1-4.7-1.7-7.7-1.7s-5.6.6-7.7 1.7" fill="#ff717f"/><path d="m47 36c-15 0-15 0-29.9 0-2.1 0-2.1 4-.1 4 10.4 0 19.6 0 30 0 2 0 2-4 0-4" fill="#fff"/><g fill="#664e27"><circle cx="20.5" cy="23" r="5"/><circle cx="43.5" cy="23" r="5"/></g></svg>
-                    </label>
-                
-                
-                </fieldset>
-        </aside>
     </main>
     <a href="#body">Back to top</a>
 </body>
