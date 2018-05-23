@@ -1024,7 +1024,6 @@ section:last-of-type:active {
     section:first-of-type {
         /* grid-column: 1 / 3;
         grid-row: 2; */
-        background-color: var(--light);
         display: flex;
         flex-wrap: wrap;
     }
